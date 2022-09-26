@@ -169,9 +169,9 @@ function renderChannel(data)
         {
             var trimmed_title = (dataItem.title);
         }
-        var titleC = String(dataItem.title);
-        titleC = titleC.toLowerCase()
-        if(!(exclude_list.includes(titleC)))
+        var titleZ = String(dataItem.title);
+        titleZ = titleC.toLowerCase()
+        if(!(exclude_list.includes(titleZ)))
         {
             var channelDiv = '<div data-sort="0" class="channelCard" id="'+dataItem.id+'"><div class="count_holder">--</div><img class="thumbnail" src="'+dataItem.avatar+'" alt=""><div class="data_holder"><div class="channel_title">'+trimmed_title+'</div><div class="subcount odometer" id="'+dataItem.id+'_subcount">000,000,000</div></div></div>'; 
             jQuery('#channelsList').append(channelDiv);

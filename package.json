@@ -1,15 +1,19 @@
 {
   "name": "ysc-app",
   "productName": "ysc-app",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "1.2.0",
+  "description": "This app is a live sub counter.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "pack:osx": "electron-packager . $npm_package_productName --out=dist/osx --platform=darwin --arch=x64 --icon=assets/build/osx/icon.icns && npm run codesign",
+    "pack:win32": "electron-packager . YSC --out=dist/win --platform=win32 --arch=ia32",
+    "pack:win64": "electron-packager . YSC --out=dist/win --platform=win32 --arch=x64 --app-version=1.2.0 --icon=assets/build/win/icon.ico",
+    "build": "npm run pack:osx && npm run pack:win32 && npm run pack:win64"
   },
   "keywords": [],
   "author": {
@@ -48,6 +52,8 @@
     "bootstrap": "^5.2.1",
     "cheerio": "^1.0.0-rc.12",
     "electron-alert": "^0.1.20",
+    "electron-builder": "^23.3.3",
+    "electron-packager": "^16.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "jquery": "^3.6.1",
     "vid_data": "^1.0.0"
