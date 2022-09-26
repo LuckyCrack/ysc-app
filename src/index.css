@@ -1,7 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0px;
+  background-color: #dedede;
+}
+#channelsList
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 950px;
+  margin-top: 10px;
+}
+.channelCard
+{
+  background-color: #fff;
+  height: 85px;
+  /* max-width: 25%; */
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 5px;
+  box-shadow: 0 5px 10px 2px #b3b3b3;
+}
+.thumbnail
+{
+  height: 75px;
+  border-radius: 100px;
+  border: 2px solid #f1f1f1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.count_holder
+{
+  font-size: 20px;
+  font-weight: 600;
+}
+.channel_title
+{
+    font-size: 16px;
+}
+.subcount
+{
+  font-size: 22px;
+  font-weight: 600;
+}
+.modal
+{
+  background-color: #dedede;
+}
+.modal-dialog
+{
+  box-shadow: 0 2px 15px -5px #505050 !important;
 }
