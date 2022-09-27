@@ -17,5 +17,4 @@
  - Saves the data of the channels locally so that you don't have to scrap data again and again and get you IP banned from SocialBlade.com
  
  ## Images
- <img src="">
- <img src="">
+ <img src="https://raw.githubusercontent.com/LuckyCrack/ysc-app/main/vid_sample.gif">
