@@ -5,13 +5,13 @@
  
  ### Open for contibutions 🕺
  
- ## Libraries used :
+ ## Libraries used
  - Anime.js
  - Odometer
  - Cheerio
  - JQuery
  
- ## Features :
+ ## Features
  - It uses webscraping (No Youtube API).
  - Enter how many channels you would like to watch.
  - Enter what channels you would like to exclude from the list. (Youtube Movies Pfft... who wants to see that)
