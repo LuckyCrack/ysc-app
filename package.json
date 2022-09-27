@@ -11,9 +11,9 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
     "pack:osx": "electron-packager . YSC --overwrite --platform=darwin --arch=x64 --icon=assets/build/osx/icon.icns --prune=true --out=release-builds",
-    "pack:win32": "electron-packager . YSC --out=dist/win --platform=win32 --arch=ia32",
+    "pack:win32": "electron-packager . YSC --out=dist/win --platform=win32 --arch=ia32  --icon=assets/build/win/icon.ico",
     "pack:win64": "electron-packager . YSC --out=dist/win --platform=win32 --arch=x64 --app-version=1.2.0 --icon=assets/build/win/icon.ico",
-    "build": "npm run pack:osx && npm run pack:win32 && npm run pack:win64",
+    "build": "npm run pack:win32 && npm run pack:win64",
     "build-osx": "npm run pack:osx"
   },
   "keywords": [],

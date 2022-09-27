@@ -170,7 +170,7 @@ function renderChannel(data)
             var trimmed_title = (dataItem.title);
         }
         var titleZ = String(dataItem.title);
-        titleZ = titleC.toLowerCase()
+        titleZ = titleZ.toLowerCase()
         if(!(exclude_list.includes(titleZ)))
         {
             var channelDiv = '<div data-sort="0" class="channelCard" id="'+dataItem.id+'"><div class="count_holder">--</div><img class="thumbnail" src="'+dataItem.avatar+'" alt=""><div class="data_holder"><div class="channel_title">'+trimmed_title+'</div><div class="subcount odometer" id="'+dataItem.id+'_subcount">000,000,000</div></div></div>'; 
@@ -247,6 +247,18 @@ function getCount(data)
                             easing: 'linear',
                             loop: false
                             });
+
+                            anime({
+                                targets: id_s,
+                            keyframes: [
+                                {backgroundColor: '#fff'},
+                                {backgroundColor: '#ddd'},
+                                {backgroundColor: '#fff'}
+                            ],
+                            duration: 1500,
+                            easing: 'linear',
+                            loop: false
+                            })
                         }
                         else
                         {
@@ -261,13 +273,25 @@ function getCount(data)
                             easing: 'linear',
                             loop: false
                             });
+
+                            anime({
+                                targets: id_s,
+                            keyframes: [
+                                {backgroundColor: '#fff'},
+                                {backgroundColor: '#ddd'},
+                                {backgroundColor: '#fff'}
+                            ],
+                            duration: 1500,
+                            easing: 'linear',
+                            loop: false
+                            })
                         }
                     }
                     setTimeout(() => {
                         jQuery(id_selector).html(response.est_sub);
                         jQuery(id_s).attr('data-sort',response.est_sub);
                         promises.push("sent")
-                    }, 1500);
+                    }, 1600);
                     // sortDivs();
                 },
                 error: function (error) {
@@ -286,7 +310,7 @@ function getCount(data)
                 sortDivs();
             }
             getCount(data);
-        }, 4000);
+        }, 4100);
     });
 }
 
@@ -334,13 +358,13 @@ function sortDivs()
         var contentB =parseInt( jQuery(b).data('sort'));
         return (contentA > contentB) ? -1 : (contentA < contentB) ? 1 : 0;
     });
+    jQuery('#channelsList').html(result);
+    init_list.sort();
+    init_list.reverse();
     var lenth_card = jQuery('.channelCard').length;
     for (let inss = 0; inss < lenth_card; inss++) {
         jQuery('.channelCard').eq(inss).find('.count_holder').html(inss+1);
     }
-    jQuery('#channelsList').html(result);
-    init_list.sort();
-    init_list.reverse();
 }
 function isEmptyOrSpaces(str){
     return str === null || str.match(/^ *$/) !== null;
